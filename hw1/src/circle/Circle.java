@@ -56,7 +56,8 @@ public class Circle extends GraphicObject implements Cloneable {
 
 	// TODO To complete
 	/**
-	 * @return the Circle with this EXACT format Circle: centerX = ... centerY = ... radius = ...
+	 * @return the Circle with this EXACT format Circle: centerX = ... centerY = ...
+	 *         radius = ...
 	 */
 	@Override
 	public String toString() {
@@ -66,19 +67,21 @@ public class Circle extends GraphicObject implements Cloneable {
 	// TODO To complete
 	// TODO Be sure that you understand the difference between equals and ==
 	/**
-	 * @return true if this and obj have the same values for
-	 * centerX, centerY and radius
+	 * @return true if this and obj have the same values for centerX, centerY and
+	 *         radius
 	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Circle)
-			if (this.centerX == ((Circle) obj).centerX && this.centerY == ((Circle) obj).centerY && this.radius == ((Circle) obj).radius) return true;
+			if (this.centerX == ((Circle) obj).centerX && this.centerY == ((Circle) obj).centerY
+					&& this.radius == ((Circle) obj).radius)
+				return true;
 		return false;
 	}
 
 	// TODO To complete
 	/**
-	 * @return an exact copy of the Circle that is a new instance 
+	 * @return an exact copy of the Circle that is a new instance
 	 */
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
@@ -86,7 +89,7 @@ public class Circle extends GraphicObject implements Cloneable {
 		circleClone.centerX = this.centerX;
 		circleClone.centerY = this.centerY;
 		circleClone.radius = this.radius;
-		
+
 		return circleClone;
 	}
 

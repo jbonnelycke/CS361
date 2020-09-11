@@ -23,6 +23,7 @@ public class Reflection {
 
 	/**
 	 * Print the class corresponding to the object
+	 * 
 	 * @param o the object
 	 */
 	public void correspondingClass(Object o) {
@@ -33,10 +34,10 @@ public class Reflection {
 	}
 
 	/**
-	 * Print the chain of super classes of the object 
-	 * Format of the output:
-	 * Inheritance chain:
-	 * Cn inherits from Cn-1 inherits ... inherits from java.lang.Object
+	 * Print the chain of super classes of the object Format of the output:
+	 * Inheritance chain: Cn inherits from Cn-1 inherits ... inherits from
+	 * java.lang.Object
+	 * 
 	 * @param o the object
 	 */
 	public void inheritanceChain(Object o) {
@@ -53,9 +54,10 @@ public class Reflection {
 			System.out.print(" inherits from " + temp.getName());
 		}
 	}
-	
+
 	/**
 	 * Print the list of methods of the object
+	 * 
 	 * @param o an object
 	 */
 	public void listMethods(Object o) {
@@ -70,7 +72,7 @@ public class Reflection {
 		// Use this EXACT format
 		for (int i = 0; i < m.length; i++)
 			System.out.println(m[i]);
-		
+
 		System.out.println("\n");
 	}
 
@@ -82,26 +84,28 @@ public class Reflection {
 
 	/**
 	 * Demonstration
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 
-		Reflection r = new Reflection();		
-		
+		Reflection r = new Reflection();
+
 		// Demonstration of the methods on an objet of type String
 		// TODO To complete
 		String string = new String("hello world");
+		
 		r.listMethods(string);
-
 		r.inheritanceChain(string);
+		
 		System.out.println("\n");
 		System.out.println("----------------------------------------------------------------------");
-		
-		// Demonstration of the methods on an objet of type ColoredCircle
-		// TODO To complete		
-		circle.ColoredCircle cc = new circle.ColoredCircle();
-		r.listMethods(cc);
 
+		// Demonstration of the methods on an objet of type ColoredCircle
+		// TODO To complete
+		circle.ColoredCircle cc = new circle.ColoredCircle();
+		
+		r.listMethods(cc);
 		r.inheritanceChain(cc);
 		System.out.println();
 	}

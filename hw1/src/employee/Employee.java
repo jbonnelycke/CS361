@@ -8,7 +8,7 @@ package employee;
  *
  */
 public class Employee {
-	
+
 	private String fname, lname, ssn;
 
 	/**
@@ -46,10 +46,9 @@ public class Employee {
 	public void setFname(String fname) {
 		this.fname = fname;
 	}
-	
+
 	public void whoAmI() {
 		System.out.println("EMPLOYEE");
 	}
 
 }
-

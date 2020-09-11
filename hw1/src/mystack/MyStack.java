@@ -33,23 +33,25 @@ public class MyStack<T> {
 	}
 
 	public T pop() {
+		// TODO To complete
 		if (theStack != null) {
 			T temp = theStack.val;
 			theStack = theStack.next;
 			return temp;
-		}
-		else return null;
+		} else
+			return null;
 	}
 
+	
 	public void push(T v) {
+		// TODO To complete
 		theStack = new MyNode<T>(v, theStack);
 	}
-	
+
 	public T peek() {
 		return theStack.val;
 	}
 
-	
 	/**
 	 * @param args
 	 */
@@ -64,7 +66,7 @@ public class MyStack<T> {
 		intStack.pop();
 		// Push 5
 		intStack.push(5);
-		
+
 		// TODO To complete
 		// Create a stack of Person
 		MyStack<Person> personStack = new MyStack<Person>();

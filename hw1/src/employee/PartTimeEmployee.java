@@ -10,7 +10,7 @@ package employee;
 public class PartTimeEmployee extends Employee {
 
 	private double hourlyRate;
-	
+
 	public PartTimeEmployee(String fname, String lname, String ssn, double hourlyRate) {
 		super(fname, lname, ssn);
 		this.hourlyRate = hourlyRate;
@@ -27,7 +27,8 @@ public class PartTimeEmployee extends Employee {
 	public String getContractType() {
 		return "Contract";
 	}
-	
+
+	@Override
 	public void whoAmI() {
 		System.out.println("PART TIME EMPLOYEE");
 	}

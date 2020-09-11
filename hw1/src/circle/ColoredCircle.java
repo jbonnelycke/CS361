@@ -10,7 +10,7 @@ package circle;
 public class ColoredCircle extends Circle {
 
 	public int color;
-	
+
 	/**
 	 * 
 	 */
@@ -20,7 +20,7 @@ public class ColoredCircle extends Circle {
 	@Override
 	void moveTo(int newX, int newY) {
 	}
-	
+
 	// overridden method from Circle
 	@Override
 	void draw() {

@@ -8,9 +8,9 @@ package mystack;
  *
  */
 public class Person {
-	
+
 	private String fname, lname;
-	
+
 	public String getFname() {
 		return fname;
 	}
@@ -25,15 +25,13 @@ public class Person {
 
 	public void setLname(String lname) {
 		this.lname = lname;
-	}	
+	}
 
 	/**
 	 * 
 	 */
 	public Person() {
 	}
-	
-
 
 	/**
 	 * @param fname
