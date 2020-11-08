@@ -5,7 +5,7 @@
  */
 public class ScannerDemo {
 
-	private static String file1 = "D:\\Important\\School\\Git\\CS361\\hw4\\src\\prog1.jay";
+	private static String file1 = "D:\\Important\\School\\Git\\CS361\\hw4\\src\\tester.jay";
 	private static int counter = 1;
 
 	public static void main(String args[]) {

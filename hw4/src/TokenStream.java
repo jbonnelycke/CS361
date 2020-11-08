@@ -79,7 +79,13 @@ public class TokenStream {
 			case '!':
 				// look for <=, >=, ==, and !=
 				nextChar = readChar();
-				// TODO TO BE COMPLETED
+				if (nextChar == '=') {
+					t.setValue(t.getValue() + nextChar);
+					nextChar = readChar();
+					return t;
+				}
+				else
+					t.setType("Other");
 				return t;
 			case '|':
 				// Look for ||
