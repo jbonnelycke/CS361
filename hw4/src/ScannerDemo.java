@@ -12,9 +12,11 @@ public class ScannerDemo {
 		TokenStream ts = new TokenStream(file1);
 		System.out.println(file1);
 		Token tk;
-		while (!ts.isEndofFile()) {
+		int i = 0;
+		while (i < 100) {
 			tk = ts.nextToken();
 			System.out.println("Token " + counter++ + " - Type: " + tk.getType() + " - Value: " + tk.getValue());
+			i++;
 		}
 	}
 }

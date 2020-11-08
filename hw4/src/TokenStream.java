@@ -57,7 +57,6 @@ public class TokenStream {
 				// skip rest of line - it's a comment.
 				// TODO TO BE COMPLETED
 				// look for <cr>, <lf>, <ff>
-
 			} else {
 				// A slash followed by anything else must be an operator.
 				t.setValue("/");
@@ -78,6 +77,7 @@ public class TokenStream {
 			case '=':
 			case '!':
 				// look for <=, >=, ==, and !=
+				// TODO TO BE COMPLETED
 				nextChar = readChar();
 				if (nextChar == '=') {
 					t.setValue(t.getValue() + nextChar);
@@ -85,7 +85,7 @@ public class TokenStream {
 					return t;
 				}
 				else
-					t.setType("Other");
+					t.setValue(t.getValue());
 				return t;
 			case '|':
 				// Look for ||
@@ -121,7 +121,9 @@ public class TokenStream {
 		// Then check for a separator.
 		if (isSeparator(nextChar)) {
 			t.setType("Separator");
-			t.setValue(t.getValue());
+			// TODO TO BE COMPLETED
+			t.setValue(t.getValue() + nextChar);
+			nextChar = readChar();
 			return t;
 		}
 
