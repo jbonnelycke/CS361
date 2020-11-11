@@ -1,4 +1,4 @@
-main 
+main
 then
 else
 // comment
@@ -22,3 +22,4 @@ while
 !=
 | // lexical error
 ||
+2

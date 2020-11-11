@@ -64,6 +64,7 @@ public class TokenStream {
 				}
 				nextChar = readChar();
 				skipWhiteSpace();
+
 			} else {
 				// A slash followed by anything else must be an operator.
 				t.setValue("/");
