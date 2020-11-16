@@ -88,3 +88,26 @@ fun exp1 x 0 = 1;
 fun exp1 x 0 = 1
 | exp1 x y = x * exp1 x y-1;
 datatype ’a BinaryTree = btempty | bt of ’a * ’a BinaryTree * ’a BinaryTree ;
+val Tree = bt(2,btempty, bt(3,btempty, bt(7,bt(6,bt(5,btempty,btempty), btempty), bt(8,btempty,btempty))));
+fun lookup (btempty,) = false
+= |   lookup(bt(root:int,left,right),x:int) =
+=      if (x = root) then true
+=      else (if (x <= root) then lookup(left,x)
+=           else lookup(right,x) );
+lookup(Tree,6);
+lookup(Tree,1);
+lookup(Tree,9);
+lookup(Tree,8);
+lookup(btempty,6);
+fun inorder (btempty) = []
+|  inorder(bt(root:’a,left,right)) =
+inorder(left) @ (root ::  inorder(right));
+fun preorder (btempty) = []
+|  preorder(bt(root:’a,left,right)) =
+root ::  (preorder(left) @ preorder(right));
+fun postorder (btempty) = []
+|  postorder(bt(root:’a,left,right)) =
+(postorder(left) @ postorder(right)) @ (root ::[]);
+val Expression =
+= bt("+",
+val Expression = bt("+",bt("*",bt("+",bt("2",btempty,btempty),bt("5",btempty,btempty) ),bt("*",bt("3",btempty,btempty),bt("4",btempty,btempty) ) ),bt("*",bt("1",btempty,btempty),bt("6",btempty,btempty) ) );
