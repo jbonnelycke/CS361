@@ -28,3 +28,5 @@ member(X,[_|Y]) :- member(X,Y).
 
 append([],X,X).
 append1([H|T],Y,[H|Z]) :- append1(T,Y,Z).
+
+rectangleperimeter(H, W, P) :- P is 2 * H + 2 * W.
